@@ -4,10 +4,11 @@
 > Studio-grade 320 kbps Lossless AAC audio with zero tracking and zero ads.
 
 ```text
-┌────────────────────────────────────────────────────────┐
-│ ♫  RECO TERMINAL PLAYER                        v1.0.3 │
-│ Ad-free music • Lossless 320 kbps • Zero tracking      │
-└────────────────────────────────────────────────────────┘
+    ____  __________ ____   ᵛ¹·⁰·³
+   / __ \/ ____/ ____/ __ \
+  / /_/ / __/ / /   / / / /   Studio-grade 320 kbps Lossless AAC
+ / _, _/ /___/ /___/ /_/ /    Zero ads • Zero tracking
+/_/ |_/_____/\____/\____/  
 ```
 
 ---

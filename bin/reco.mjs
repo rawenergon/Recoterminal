@@ -15,6 +15,12 @@ async function main() {
   // reco /update
   // reco /help
   if (rawArgs.length > 0) {
+    if (argsString === "--version" || argsString === "-v" || argsString === "version" || argsString === "/version") {
+      const player = new TerminalPlayer();
+      player.printBanner();
+      process.exit(0);
+    }
+
     const player = new TerminalPlayer();
     await player.executeCommand(argsString);
 
