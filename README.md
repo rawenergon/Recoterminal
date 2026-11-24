@@ -5,7 +5,7 @@
 
 ```text
 ┌────────────────────────────────────────────────────────┐
-│ ♫  RECO TERMINAL PLAYER                        v1.0.1 │
+│ ♫  RECO TERMINAL PLAYER                        v1.0.2 │
 │ Ad-free music • Lossless 320 kbps • Zero tracking      │
 └────────────────────────────────────────────────────────┘
 ```
