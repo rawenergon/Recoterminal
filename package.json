@@ -1,0 +1,39 @@
+{
+  "name": "recoterminal",
+  "version": "1.0.0",
+  "description": "Recoterminal - Fast, calm, ad-free music in your terminal with 320 kbps audio quality",
+  "author": "rawenergon",
+  "homepage": "https://github.com/rawenergon/Recoterminal",
+  "main": "lib/terminal-player.mjs",
+  "bin": {
+    "reco": "./bin/reco.mjs",
+    "recoterminal": "./bin/reco.mjs"
+  },
+  "files": [
+    "bin",
+    "lib",
+    "install.ps1",
+    "install.sh",
+    "README.md",
+    "LICENSE"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rawenergon/Recoterminal.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rawenergon/Recoterminal/issues"
+  },
+  "license": "GPL-3.0-only",
+  "type": "module",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "start": "node ./bin/reco.mjs",
+    "test": "node --input-type=module -e \"import('./lib/terminal-player.mjs').then(() => console.log('OK'))\""
+  },
+  "dependencies": {
+    "youtubei.js": "^13.4.0"
+  }
+}
