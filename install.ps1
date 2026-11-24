@@ -3,10 +3,13 @@
 
 $ErrorActionPreference = "Stop"
 
+$O = "$([char]27)[38;5;208m"
+$R = "$([char]27)[0m"
+
 Write-Host ""
-Write-Host "=======================================================" -ForegroundColor Cyan
-Write-Host "  🎵  Recoterminal - Installer & Updater for Windows" -ForegroundColor Cyan
-Write-Host "=======================================================" -ForegroundColor Cyan
+Write-Host "${O}=======================================================${R}"
+Write-Host "${O}  🎵  Recoterminal - Installer & Updater for Windows${R}"
+Write-Host "${O}=======================================================${R}"
 Write-Host ""
 
 # 1. Verify Node.js is installed
