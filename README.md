@@ -90,8 +90,8 @@ reco >
 | `/next` or `/skip` | Skip to the next song in the queue |
 | `/auto` | Toggle continuous smart radio mode |
 | `/volume <0-100>` | Adjust volume (e.g. `/volume 80`) |
-| `/connect lastfm` | **Connect Last.fm account for live scrobbling** |
-| `/lastfm` | Show Last.fm scrobbler status |
+| `/connect lastfm [key] [secret]` | **Connect Last.fm for scrobbling (saves to local storage)** |
+| `/lastfm` | Show Last.fm scrobbler status & stats |
 | `/disconnect` | Disconnect Last.fm account |
 | `/queue` | View upcoming tracks in the queue |
 | `/import <spotify-url>` | Import full Spotify playlist or album |
