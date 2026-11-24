@@ -4,7 +4,7 @@
 > Studio-grade 320 kbps Lossless AAC audio with zero tracking and zero ads.
 
 ```text
-    ____  __________ ____   ᵛ¹·⁰·⁴
+    ____  __________ ____   ᵛ¹·⁰·⁵
    / __ \/ ____/ ____/ __ \
   / /_/ / __/ / /   / / / /   Studio-grade 320 kbps Lossless AAC
  / _, _/ /___/ /___/ /_/ /    Zero ads • Zero tracking
@@ -64,7 +64,7 @@ reco
 Inside the player, you get a beautiful vibrant orange status card with song details and progress:
 ```text
 ┌────────────────────────────────────────────────────────┐
-│ ♫  RECO TERMINAL PLAYER ᵛ¹·⁰·⁴             [RADIO OFF] │
+│ ♫  RECO TERMINAL PLAYER ᵛ¹·⁰·⁵             [RADIO OFF] │
 ├────────────────────────────────────────────────────────┤
 │ Title:  Sajan Sajan Teri Dulhan                        │
 │ Artist: Anu Malik, Alka Yagnik                         │
@@ -79,6 +79,19 @@ reco >
 
 ---
 
+## 👥 Live Synchronized Jam Sessions (v1.0.5)
+
+Listen to music together in real time with zero configuration and zero setup:
+
+1. **Host a Jam Session**:
+   Type `/create jam` in your terminal. You'll receive a unique 4-character room code (e.g. `X9K2`).
+2. **Invite Friends**:
+   Your friends anywhere in the world join via `/join jam X9K2`.
+3. **Real-time Synchronization**:
+   Whenever the host plays a song, pauses, resumes, or skips, all listeners play along in real time!
+
+---
+
 ## 🎮 Command Reference
 
 | Command | Action |
@@ -90,6 +103,10 @@ reco >
 | `/next` or `/skip` | Skip to the next song in the queue |
 | `/auto` | Toggle continuous smart radio mode |
 | `/volume <0-100>` | Adjust volume (e.g. `/volume 80`) |
+| `/create jam` | **Host a live synchronized Jam session (gives 4-digit code)** |
+| `/join jam <code>` | **Join a Jam room via 4-character code (live real-time sync)** |
+| `/leave jam` | Leave Jam session and return to solo playback |
+| `/jam` | Show Jam room code, role, and connected status |
 | `/connect lastfm [key] [secret]` | **Connect Last.fm for scrobbling (saves to local storage)** |
 | `/lastfm` | Show Last.fm scrobbler status & stats |
 | `/disconnect` | Disconnect Last.fm account |
