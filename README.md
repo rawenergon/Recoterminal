@@ -5,7 +5,7 @@
 
 ```text
 ┌────────────────────────────────────────────────────────┐
-│ 🎵  RECO TERMINAL PLAYER                        v1.0.0 │
+│ ♫  RECO TERMINAL PLAYER                        v1.0.1 │
 │ Ad-free music • Lossless 320 kbps • Zero tracking      │
 └────────────────────────────────────────────────────────┘
 ```
@@ -60,20 +60,20 @@ Run `reco` to enter the interactive console:
 reco
 ```
 
-Inside the player, you get a live progress bar that ticks smoothly second-by-second:
+Inside the player, you get a beautiful vibrant orange status card with song details and progress:
 ```text
 ┌────────────────────────────────────────────────────────┐
-│ 🎵  RECO MUSIC PLAYER                      [RADIO OFF] │
+│ ♫  RECO TERMINAL PLAYER                    [RADIO OFF] │
 ├────────────────────────────────────────────────────────┤
 │ Title:  Sajan Sajan Teri Dulhan                        │
 │ Artist: Anu Malik, Alka Yagnik                         │
 │ Audio:  Master Quality • 320 kbps [Lossless AAC]       │
 │                                                        │
 │ ▶ PLAYING 01:23 ━━━━━●──────────── 03:30 (39%)         │
-│ Vol: 100% • /pause, /resume, /auto, /vol, /help        │
+│ Vol: 100% • ♫ Last.fm: @dj                             │
 └────────────────────────────────────────────────────────┘
 
-▶ [01:23 ━━━━━●──────────── 03:30] reco > 
+reco > 
 ```
 
 ---
@@ -89,6 +89,9 @@ Inside the player, you get a live progress bar that ticks smoothly second-by-sec
 | `/next` or `/skip` | Skip to the next song in the queue |
 | `/auto` | Toggle continuous smart radio mode |
 | `/volume <0-100>` | Adjust volume (e.g. `/volume 80`) |
+| `/connect lastfm` | **Connect Last.fm account for live scrobbling** |
+| `/lastfm` | Show Last.fm scrobbler status |
+| `/disconnect` | Disconnect Last.fm account |
 | `/queue` | View upcoming tracks in the queue |
 | `/import <spotify-url>` | Import full Spotify playlist or album |
 | `/update` | **Auto-update Recoterminal to the latest release** |
