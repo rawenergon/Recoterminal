@@ -4,7 +4,7 @@
 > Studio-grade 320 kbps Lossless AAC audio with zero tracking and zero ads.
 
 ```text
-    ____  __________ ____   ᵛ¹·⁰·³
+    ____  __________ ____   ᵛ¹·⁰·⁴
    / __ \/ ____/ ____/ __ \
   / /_/ / __/ / /   / / / /   Studio-grade 320 kbps Lossless AAC
  / _, _/ /___/ /___/ /_/ /    Zero ads • Zero tracking
@@ -64,7 +64,7 @@ reco
 Inside the player, you get a beautiful vibrant orange status card with song details and progress:
 ```text
 ┌────────────────────────────────────────────────────────┐
-│ ♫  RECO TERMINAL PLAYER                    [RADIO OFF] │
+│ ♫  RECO TERMINAL PLAYER ᵛ¹·⁰·⁴             [RADIO OFF] │
 ├────────────────────────────────────────────────────────┤
 │ Title:  Sajan Sajan Teri Dulhan                        │
 │ Artist: Anu Malik, Alka Yagnik                         │
