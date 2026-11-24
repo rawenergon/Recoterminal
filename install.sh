@@ -10,24 +10,42 @@ echo "  🎵  Recoterminal - Installer & Updater"
 echo "======================================================="
 echo ""
 
-# 1. Check Node.js
-if ! command -v node >/dev/null 2>&1; then
-    echo "[!] Node.js is required. Please install Node.js 20+ from https://nodejs.org/"
-    exit 1
+# Check if running inside Termux on Android
+IS_TERMUX=false
+if [ -n "$TERMUX_VERSION" ] || [ -d "/data/data/com.termux" ]; then
+    IS_TERMUX=true
 fi
 
-# 2. Check audio engine
-if [ "$(uname)" = "Darwin" ]; then
-    echo "[*] macOS detected: native afplay engine ready."
-else
+if [ "$IS_TERMUX" = true ]; then
+    echo "[*] Android Termux environment detected!"
+    if ! command -v node >/dev/null 2>&1; then
+        echo "[*] Installing Node.js via pkg..."
+        pkg install -y nodejs
+    fi
     if ! command -v ffplay >/dev/null 2>&1; then
-        echo "[*] Installing ffmpeg/ffplay for audio playback..."
-        if command -v apt-get >/dev/null 2>&1; then
-            sudo apt-get update -qq && sudo apt-get install -y ffmpeg
-        elif command -v dnf >/dev/null 2>&1; then
-            sudo dnf install -y ffmpeg
-        elif command -v pacman >/dev/null 2>&1; then
-            sudo pacman -S --noconfirm ffmpeg
+        echo "[*] Installing FFmpeg/ffplay for audio playback..."
+        pkg install -y ffmpeg
+    fi
+else
+    # 1. Check Node.js on standard macOS / Linux
+    if ! command -v node >/dev/null 2>&1; then
+        echo "[!] Node.js is required. Please install Node.js 20+ from https://nodejs.org/"
+        exit 1
+    fi
+
+    # 2. Check audio engine
+    if [ "$(uname)" = "Darwin" ]; then
+        echo "[*] macOS detected: native afplay engine ready."
+    else
+        if ! command -v ffplay >/dev/null 2>&1; then
+            echo "[*] Installing ffmpeg/ffplay for audio playback..."
+            if command -v apt-get >/dev/null 2>&1; then
+                sudo apt-get update -qq && sudo apt-get install -y ffmpeg
+            elif command -v dnf >/dev/null 2>&1; then
+                sudo dnf install -y ffmpeg
+            elif command -v pacman >/dev/null 2>&1; then
+                sudo pacman -S --noconfirm ffmpeg
+            fi
         fi
     fi
 fi

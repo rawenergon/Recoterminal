@@ -24,6 +24,13 @@ irm https://raw.githubusercontent.com/rawenergon/Recoterminal/main/install.ps1 |
 curl -fsSL https://raw.githubusercontent.com/rawenergon/Recoterminal/main/install.sh | bash
 ```
 
+### 📱 Android (Termux)
+In the Termux app on your phone, paste this single line:
+```bash
+curl -fsSL https://raw.githubusercontent.com/rawenergon/Recoterminal/main/install.sh | bash
+```
+*(Automatically sets up Node.js, FFmpeg audio engine, and Recoterminal).*
+
 ### 📦 Cross-Platform via npm
 ```bash
 npm install -g "https://github.com/rawenergon/Recoterminal/releases/download/latest/recoterminal.tgz"
