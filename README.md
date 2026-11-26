@@ -4,7 +4,7 @@
 > Studio-grade 320 kbps Lossless AAC audio with zero tracking and zero ads.
 
 ```text
-    ____  __________ ____   ᵛ¹·⁰·⁵
+    ____  __________ ____   ᵛ¹·⁰·⁶
    / __ \/ ____/ ____/ __ \
   / /_/ / __/ / /   / / / /   Studio-grade 320 kbps Lossless AAC
  / _, _/ /___/ /___/ /_/ /    Zero ads • Zero tracking
@@ -64,7 +64,7 @@ reco
 Inside the player, you get a beautiful vibrant orange status card with song details and progress:
 ```text
 ┌────────────────────────────────────────────────────────┐
-│ ♫  RECO TERMINAL PLAYER ᵛ¹·⁰·⁵             [RADIO OFF] │
+│ ♫  RECO TERMINAL PLAYER ᵛ¹·⁰·⁶             [RADIO OFF] │
 ├────────────────────────────────────────────────────────┤
 │ Title:  Sajan Sajan Teri Dulhan                        │
 │ Artist: Anu Malik, Alka Yagnik                         │
@@ -76,6 +76,18 @@ Inside the player, you get a beautiful vibrant orange status card with song deta
 
 reco > 
 ```
+
+### 3. Download Songs for Offline Playback (v1.0.6)
+Download any 320 kbps Master Quality AAC song (in `.mp4` container) with real-time download progress:
+```bash
+reco /download "Starboy The Weeknd"
+```
+Or while listening inside `reco`, simply type:
+```text
+reco > /download
+```
+- **On Desktop (Windows/macOS/Linux)**: Saved directly to your system `Music` or `Downloads` folder.
+- **On Phone (Termux)**: Saved directly to `~/storage/shared/Music` and automatically dispatched to Android's default media player via `termux-open`.
 
 ---
 
@@ -97,6 +109,7 @@ Listen to music together in real time with zero configuration and zero setup:
 | Command | Action |
 |---|---|
 | `/play "<song>"` | Search and play any song instantly |
+| `/download [song]` | **Download 320 kbps Master MP4 song to device / phone** |
 | `/now` or `/status` | Redraw the current song status card |
 | `/pause` / `/resume` | Pause or resume audio playback |
 | `/stop` | Stop playback and clear the queue |
