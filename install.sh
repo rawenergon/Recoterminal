@@ -53,10 +53,13 @@ fi
 # 3. Install globally via npm
 echo "[*] Installing / Updating Recoterminal CLI globally..."
 RELEASE_URL="https://github.com/rawenergon/Recoterminal/releases/download/latest/recoterminal.tgz"
+TMP_DIR="${TMPDIR:-/tmp}"
+mkdir -p "$TMP_DIR" 2>/dev/null || true
+TMP_TGZ="$TMP_DIR/recoterminal.tgz"
 
-if curl -sLf "$RELEASE_URL" -o /tmp/recoterminal.tgz 2>/dev/null; then
-    npm install -g /tmp/recoterminal.tgz --force
-    rm -f /tmp/recoterminal.tgz
+if curl -sLf "$RELEASE_URL" -o "$TMP_TGZ" 2>/dev/null; then
+    npm install -g "$TMP_TGZ" --force
+    rm -f "$TMP_TGZ"
 else
     npm install -g "https://github.com/rawenergon/Recoterminal.git" --force
 fi

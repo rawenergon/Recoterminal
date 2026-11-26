@@ -4,7 +4,7 @@
 > Studio-grade 320 kbps Lossless AAC audio with zero tracking and zero ads.
 
 ```text
-    ____  __________ ____   ᵛ¹·⁰·⁶
+    ____  __________ ____   ᵛ¹·⁰·⁷
    / __ \/ ____/ ____/ __ \
   / /_/ / __/ / /   / / / /   Studio-grade 320 kbps Lossless AAC
  / _, _/ /___/ /___/ /_/ /    Zero ads • Zero tracking
@@ -30,7 +30,7 @@ In the Termux app on your phone, paste this single line:
 ```bash
 curl -fsSL https://raw.githubusercontent.com/rawenergon/Recoterminal/main/install.sh | bash
 ```
-*(Automatically sets up Node.js, FFmpeg audio engine, and Recoterminal).*
+*(Automatically sets up Node.js, FFmpeg audio engine, and Recoterminal with native phone media support).*
 
 ### 📦 Cross-Platform via npm
 ```bash
@@ -39,68 +39,69 @@ npm install -g "https://github.com/rawenergon/Recoterminal/releases/download/lat
 
 ---
 
-## 🚀 How to Play
+## 🚀 Interactive OpenCode Dashboard (v1.0.7)
 
-### 1. Direct Command Line Playback
-Play any song directly from your terminal:
-```bash
-reco /play "Starboy The Weeknd"
-```
-Or start continuous smart radio mode:
-```bash
-reco /auto
-```
-Or import an entire Spotify album or playlist:
-```bash
-reco /import "https://open.spotify.com/album/4yP0hdKOZPNshxUOjY0cZj"
-```
-
-### 2. Interactive Terminal Player
-Run `reco` to enter the interactive console:
+Run `reco` to launch the interactive live TUI:
 ```bash
 reco
 ```
 
-Inside the player, you get a beautiful vibrant orange status card with song details and progress:
 ```text
-┌────────────────────────────────────────────────────────┐
-│ ♫  RECO TERMINAL PLAYER ᵛ¹·⁰·⁶             [RADIO OFF] │
-├────────────────────────────────────────────────────────┤
-│ Title:  Sajan Sajan Teri Dulhan                        │
-│ Artist: Anu Malik, Alka Yagnik                         │
-│ Audio:  Master Quality • 320 kbps [Lossless AAC]       │
-│                                                        │
-│ ▶ PLAYING 01:23 ━━━━━●──────────── 03:30 (39%)         │
-│ Vol: 100% • ♫ Last.fm: @dj                             │
-└────────────────────────────────────────────────────────┘
+╭────────────────────────────────────────────────────────────────╮
+│ ♫  RECOTERMINAL ᵛ¹·⁰·⁷                          ● 320 KBPS AAC │
+├────────────────────────────────────────────────────────────────┤
+│ Title:   Dil Galti Kar Baitha Hai (Feat. Mouni Roy)            │
+│ Artist:  Jubin Nautiyal, Meet Bros, Shardul Rathod             │
+│ Audio:   Studio Quality • 320 kbps [Lossless AAC]              │
+│                                                                │
+│ ▶ PLAYING 01:23 ━━━━━━━━━━━●───────────────── 03:45 (37%)      │
+│ Wave:     ▃▅▆▇▆▅▃     Vol: [████████░░] 80%                  │
+│ Status:  ● Jam [X9K2] (Host) • Radio: OFF • Last.fm: @dj       │
+├────────────────────────────────────────────────────────────────┤
+│ [Space] Pause/Play  [↑/↓] Vol  [←/→] Seek  [n] Next  [d] Save   │
+│ [a] Radio        [j] Jam  [l] Lastfm [/] Search [q] Quit       │
+╰────────────────────────────────────────────────────────────────╯
 
-reco > 
+reco ❯ 
 ```
 
-### 3. Download Songs for Offline Playback (v1.0.6)
-Download any 320 kbps Master Quality AAC song (in `.mp4` container) with real-time download progress:
-```bash
-reco /download "Starboy The Weeknd"
-```
-Or while listening inside `reco`, simply type:
-```text
-reco > /download
-```
-- **On Desktop (Windows/macOS/Linux)**: Saved directly to your system `Music` or `Downloads` folder.
-- **On Phone (Termux)**: Saved directly to `~/storage/shared/Music` and automatically dispatched to Android's default media player via `termux-open`.
+### ⌨️ Instant Hotkeys (Zero Typing Required)
+- **`[Space]`**: Pause / Resume audio instantly.
+- **`[↑ / ↓]`**: Smooth volume adjustment in 5% increments.
+- **`[← / →]`**: Seek audio position 10s backward or forward.
+- **`[n]`**: Skip to next track.
+- **`[d]`**: Instantly download currently playing song to phone/PC.
+- **`[a]`**: Toggle continuous radio auto-play mode.
+- **`[j]`**: Create or join a Jam synchronized room.
+- **`[l]`**: View Last.fm profile & scrobbler status.
+- **`[m]`**: Quick Mute / Unmute.
+- **`[/]`**: Open command/search prompt (`/play "song"`, `/import`, etc.).
+- **`[q]`**: Quit Recoterminal gracefully.
 
 ---
 
-## 👥 Live Synchronized Jam Sessions (v1.0.5)
+## 👥 Live Synchronized Jam Sessions (v1.0.7)
 
-Listen to music together in real time with zero configuration and zero setup:
+Listen to music together in real time across phones and PCs with zero configuration:
 
 1. **Host a Jam Session**:
-   Type `/create jam` in your terminal. You'll receive a unique 4-character room code (e.g. `X9K2`).
+   Press `[j]` or type `/create jam` in your terminal. You'll receive a unique 4-character room code (e.g. `X9K2`).
 2. **Invite Friends**:
    Your friends anywhere in the world join via `/join jam X9K2`.
-3. **Real-time Synchronization**:
-   Whenever the host plays a song, pauses, resumes, or skips, all listeners play along in real time!
+3. **Instant Live Catch-Up & Sync**:
+   The moment a friend joins, they immediately start hearing what you're listening to at the exact same second. Pauses, resumes, skips, and seeks sync live in real time!
+
+---
+
+## ⬇️ 320 kbps Offline Song Downloader
+
+Download any Master Quality 320 kbps AAC song (in `.mp4` format):
+```bash
+reco /download "Dil Galti Kar Baitha Hai"
+```
+Or while playing, press `[d]`:
+- **Desktop (Windows/macOS/Linux)**: Saved to your system `Music` or `Downloads` folder.
+- **Phone (Termux)**: Saved directly to `~/storage/shared/Music` and automatically launched in Android's default music player via `termux-open`.
 
 ---
 
